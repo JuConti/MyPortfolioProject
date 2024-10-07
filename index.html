@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Simple CSS Grid Layout</title>
+
+        <link rel="stylesheet" href="css/nav.css" />
+
+    </head>
+
+    <body>
+        <!-- Header -->
+        <!-- Recommended semantic nav
+              https://developer.mozilla.org/en-US/docs/Web/HTML/Element/nav
+        -->
+        <header>
+            <nav class="navbar">
+                <ul class="nav-icon">
+                    <img src="assets/icons/scroll_triangle_down_dark.svg" alt="Logo">
+                </ul>
+                <ul class="nav-items">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+
+        </header>
+
+        <!-- Main Content Area with Grid Layout -->
+        <main>
+            <div class="fluid-grid-container">
+                <div class="grid-item">
+                    <h2>Illustrations</h2>
+                    <p>This is the content for the first grid item.</p>
+                </div>
+                <div class="grid-item">
+                    <h2>Editorial</h2>
+                    <p>This is the content for the second grid item.</p>
+                </div>
+                <div class="grid-item">
+                    <h2>Posters</h2>
+                    <p>This is the content for the third grid item.</p>
+                </div>
+                <div class="grid-item">
+                    <h2>Visual Identity</h2>
+                    <p>This is the content for the fourth grid item.</p>
+                </div>
+                <div class="grid-item">
+                    <h2>Branding</h2>
+                    <p>This is the content for the fiveth grid item.</p>
+                </div>
+                <div class="grid-item">
+                    <h2>App Designing</h2>
+                    <p>This is the content for the sixth grid item.</p>
+                </div>
+            </div>
+        </main>
+        <!-- Footer with Grid Layout -->
+        <footer class="fluid-grid-container">
+            <div>Contact Us</div>
+            <div>Privacy Policy</div>
+            <div>Follow Us</div>
+        </footer>
+
+    </body>
+
+</html>
