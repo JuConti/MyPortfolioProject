@@ -1,32 +1,32 @@
 :root {
     /* Custom color palette */
-    --background: hsla(27, 24, 36, 1); /* #323B42 */
-    --foreground: hsla(30, 7, 94, 1); /* #FCFBF9 */
+    --background: rgba(115, 91, 70, 1); /* #323B42 */
+    --foreground: rgba(242, 241, 240, 1); /* #FCFBF9 */
 
-    --card: hsla(28, 31, 63, 1); /* #D9C7BE */
+    --card: rgba(191, 160, 132, 1); /* #D9C7BE */
     --card-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
 
-    --popover: hsla(10, 95, 48, 1); /* #D9C7BE */
+    --popover: rgba(242, 48, 5, 1); /* #D9C7BE */
     --popover-foreground: hsla(28, 31, 63, 1); /* #323B42 */
 
-    --primary: hsla(10, 95, 48, 1); /* #635B58 */
-    --primary-foreground: hsla(0, 0, 95, 1); /* #FCFBF9 */
+    --primary: rgba(242, 48, 5, 1); /* #635B58 */
+    --primary-foreground: rgba(242, 241, 240, 1); /* #FCFBF9 */
 
-    --secondary: hsla(33, 85, 45, 1); /* #A59B95 */
-    --secondary-foreground: hsla(27, 24, 36, 1); /* #323B42 */
+    --secondary: rgba(217, 127, 17, 1); /* #A59B95 */
+    --secondary-foreground: rgba(115, 91, 70, 1); /* #323B42 */
 
-    --muted: hsla(10, 95, 48, 1); /* #8C817B */
-    --muted-foreground: hsla(30, 7, 94, 1); /* #FCFBF9 */
+    --muted: rgba(242, 48, 5, 1); /* #8C817B */
+    --muted-foreground: rgba(242, 241, 240, 1); /* #FCFBF9 */
 
-    --accent: hsla(33, 85, 45, 1); /* #B5A79F */
-    --accent-foreground: hsla(10, 95, 48, 1); /* #635B58 */
+    --accent: rgba(217, 127, 17, 1); /* #B5A79F */
+    --accent-foreground: rgba(242, 48, 5, 1); /* #635B58 */
 
-    --destructive: hsla(27, 24, 36, 1); /* #3B3634 */
-    --destructive-foreground: hsla(30, 7, 94, 1); /* #FCFBF9 */
+    --destructive: rgba(115, 91, 70, 1); /* #3B3634 */
+    --destructive-foreground: rgba(242, 241, 240, 1); /* #FCFBF9 */
 
-    --border: hsla(10, 95, 48, 1); /* #A59B95 */
-    --input: hsla(33, 85, 45, 1); /* #B5A79F */
-    --ring: hsla(27, 24, 36, 1); /* #323B42 */
+    --border: rgba(242, 48, 5, 1); /* #A59B95 */
+    --input: rgba(217, 127, 17, 1); /* #B5A79F */
+    --ring: rgba(115, 91, 70, 1); /* #323B42 */
 
 
     /* Combinations */
