@@ -21,3 +21,9 @@
         console.log('Page fully loaded');
     });
 })();
+
+function addElement() {
+    const newElement = document.createElement('p');
+    newElement.textContent = 'View my portfolio.';
+    document.getElementById('container').appendChild(newElement);
+}
