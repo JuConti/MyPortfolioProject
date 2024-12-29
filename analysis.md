@@ -6,12 +6,17 @@
 
 ## Mark up
 - Semantic structure 
-- 
+- Two stray end tag div errors
+- Images with alts
   
 ## Content
-- 
+- Well written and detailed arguments
 
 ## Style
 - Simplistic but effective
-- 
+- Clear
+- Responsive
+
+###Well done!
+  
 
