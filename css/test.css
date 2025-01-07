@@ -1,20 +1,21 @@
-html, body {
-                margin: 0;
-                padding: 0;
-                height: 100%;
-            }
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
 
-            .full-screen {
-                width: 100vw;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                background-color: #f0f0f0cd;
-                /* Optional background color */
-            }
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0cd;
+  /* Optional background color */
+}
 
-            svg {
-                width: 100%;
-                height: 100%;
-            }
+svg {
+  width: 100%;
+  height: 100%;
+}
