@@ -77,7 +77,7 @@ body {
 /* Highlight Section */
 .highlight-section {
   display: flex;
-  justify-content: top;
+  justify-content: center;
   align-items: center;
   height: 100vh; /* Full screen height */
   position: relative;
@@ -128,7 +128,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .highlight-images {
-    flex-direction: column;
+    flex-direction: row;
   }
 
   .image-container {
