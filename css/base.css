@@ -128,7 +128,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .highlight-images {
-    flex-direction: row;
+    flex-direction: column-reverse;
   }
 
   .image-container {
