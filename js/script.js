@@ -1,29 +1,51 @@
-(function () {
-    "use strict";
 
-    // Function to handle scroll event
-    window.addEventListener('scroll', () => {
-        const slides = document.querySelectorAll('.slide');
-        slides.forEach(slide => {
-            const rect = slide.getBoundingClientRect();
-            const offset = rect.top * 0.01; // Adjust for parallax speed
-            const slideBg = slide.querySelector('.slide__bg');
+  // Main JavaScript File
 
-            if (slideBg) {
-                slideBg.style.transform = `translateY(${offset}px)`;
-            }
+// Smooth Scroll for Navbar Links
+document.querySelectorAll('.navbar a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        target.scrollIntoView({
+            behavior: 'smooth',
+            block: 'start'
         });
     });
+});
 
-    // Window load event
-    window.addEventListener("load", function () {
-        // Site loader or any initialization code can go here
-        console.log('Page fully loaded');
+// Scroll Animation for Portfolio Items
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        } else {
+            entry.target.classList.remove('show');
+        }
     });
-})();
+}, { threshold: 0.1 });
 
-function addElement() {
-    const newElement = document.createElement('p');
-    newElement.textContent = 'View my portfolio.';
-    document.getElementById('container').appendChild(newElement);
-}
+document.querySelectorAll('.portfolio-item').forEach(item => {
+    observer.observe(item);
+});
+
+// Parallax Effect
+window.addEventListener('scroll', () => {
+    const parallax = document.querySelector('.parallax');
+    const scrollPosition = window.scrollY;
+    parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
+});
+
+// Contact Form Validation
+document.querySelector('.contact-form form').addEventListener('submit', e => {
+    e.preventDefault();
+    const name = e.target.querySelector('input[type="text"]').value;
+    const email = e.target.querySelector('input[type="email"]').value;
+    const message = e.target.querySelector('textarea').value;
+
+    if (name && email && message) {
+        alert('Thank you for reaching out!');
+        e.target.reset();
+    } else {
+        alert('Please fill in all fields before submitting.');
+    }
+});

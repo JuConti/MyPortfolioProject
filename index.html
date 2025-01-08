@@ -16,61 +16,101 @@
 
 </head>
 <body>
-    <header>
-        <h1>Julia Conti - Graphic Designer</h1>
-        <nav>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
             <ul>
-                <li><a href="#about">About Me</a></li>
-                <li><a href="#projects">Projects</a></li>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><a href="#parallax2">HTML</a></li>
-                <li><a href="../">↵ Back</a></li>
             </ul>
         </nav>
+        <div class="hero">
+            <h1>Julia Conti</h1>
+            <p>Where Creativity Meets Storytelling</p>
+        </div>
     </header>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hello! I'm Julia, a passionate graphic designer with a love for minimalism and bold design. I specialize in creating engaging visuals, including branding, web design, and marketing materials.</p>
+    <!-- Interactive Home Section -->
+    <section id="home" class="home">
+        <div class="home-content">
+            <h2 class="animated-text">I Design Experiences, Not Just Visuals</h2>
+        </div>
+        <div class="scroll-hint">Scroll Down</div>
     </section>
 
-    <section id="projects">
-        <h2>My Work</h2>
-        <div class="grid-container">
-            <div class="grid-item">
-                <img src="Stationery_Mockup_3 copy.png" >
-                <h3>Branding</h3>
-                <p>Branding and visual identity projects.</p>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-grid">
+            <div class="about-text">
+                <h2>About Me</h2>
+                <p>Hi! I’m Julia Conti, a multidisciplinary designer passionate about creating immersive and interactive visuals that resonate. My work bridges the gap between art and storytelling, bringing your ideas to life with a contemporary edge.</p>
             </div>
-            <div class="grid-item">
-                <img src="Free Letter Size Magazine Mockup bk copy.png" >
-                <h3>Illustrations</h3>
-                <p>Illustrations and image manipulation for magazines and designs.</p>
-            </div>
-            <div class="grid-item">
-                <img src="13 Free A4 A5 Magazine Mockup44 copy.png" >
-                <h3>Editorial</h3>
-                <p>Editorial, books and layout design projects.</p>
-            </div>
-            <div>
-                <h4>click here</h4>
-		<div id="container">Hello!</div>
-		<button onclick="addElement()">Add Element</button>
-		<button onclick="removeElement()">Remove Element</button>
-
+            <div class="about-image">
+                <img src="images/about-me.jpg" alt="Julia Conti">
             </div>
         </div>
-    
     </section>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>If you'd like to collaborate or learn more about my work, feel free to reach out!</p>
-        <p>Email: <a href="mailto:john.doe@example.com">juuconti@gmail.com</a></p>
+    <!-- Portfolio Section with Dynamic Interaction -->
+    <section id="portfolio" class="portfolio">
+        <h2>Selected Works</h2>
+        <div class="portfolio-container">
+            <div class="portfolio-item" style="background-color: #f0f0f0;">
+                <img src="images/project1.jpg" alt="Project 1">
+                <div class="portfolio-description">
+                    <h3>Project 1</h3>
+                    <p>Transformative design for impactful storytelling.</p>
+                </div>
+            </div>
+            <div class="portfolio-item video-item">
+                <video autoplay muted loop>
+                    <source src="videos/project.mp4" type="video/mp4">
+                </video>
+                <div class="portfolio-description">
+                    <h3>Motion and Narrative</h3>
+                    <p>Exploring storytelling through motion.</p>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="images/project2.jpg" alt="Project 2">
+                <div class="portfolio-description">
+                    <h3>Interactive Experiences</h3>
+                    <p>Engaging designs that captivate users.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <footer>
-        <p>© 2024 Julia Conti. All rights reserved.</p>
+    <!-- Interactive Parallax Section -->
+    <section class="parallax section-highlight">
+        <h2>Design That Moves You</h2>
+    </section>
+
+    <!-- Contact Section with Overlapping Elements -->
+    <section id="contact" class="contact">
+        <h2>Let’s Connect</h2>
+        <div class="contact-form">
+            <form>
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Your Email" required>
+                <textarea placeholder="Tell Me Your Story" required></textarea>
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Julia Conti | Designed with Love</p>
+        <div class="social-icons">
+            <a href="#"><img src="images/icon-instagram.svg" alt="Instagram"></a>
+            <a href="#"><img src="images/icon-dribbble.svg" alt="Dribbble"></a>
+            <a href="#"><img src="images/icon-behance.svg" alt="Behance"></a>
+        </div>
     </footer>
+
+    <script src="scripts/main.js"></script>
 </body>
 </html>
