@@ -16,33 +16,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     
 // Image growth animation for highlight section
-    document.addEventListener("DOMContentLoaded", () => {
-        const imageContainers = document.querySelectorAll(".image-container");
-      
-        // Intersection Observer to trigger animations
-        const observer = new IntersectionObserver(
-          (entries) => {
-            entries.forEach((entry) => {
-              if (entry.isIntersecting) {
-                const img = entry.target.querySelector("img");
-                const title = entry.target.querySelector(".image-title");
-      
-                // Trigger animations
-                img.style.transition = "transform 1.5s ease-out";
-                img.style.transform = "scale(1) scaleY(1)";
-                title.style.transition = "opacity 1.5s ease-out";
-                title.style.opacity = "1";
-      
-                // Unobserve after animation
-                observer.unobserve(entry.target);
-              }
-            });
-          },
-          { threshold: 0.5 }
-        );
-      
-        imageContainers.forEach((container) => observer.observe(container));
-      });
+const highlightImages = document.querySelectorAll(".highlight-images .image-container img");
+
+highlightImages.forEach((img, index) => {
+    img.style.transformOrigin = index % 2 === 0 ? "left center" : "right center";
+    img.style.transform = "scaleX(0)";
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.transition = "transform 1.2s ease-out";
+            entry.target.style.transform = "scaleX(1)";
+            observer.unobserve(entry.target);
+        }
+    });
+}, { threshold: 0.5 });
+
+highlightImages.forEach(img => observer.observe(img));
       
   
 
