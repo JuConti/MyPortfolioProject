@@ -77,12 +77,12 @@ body {
 /* Highlight Section */
 .highlight-section {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  overflow: hidden;
+  height: 100vh; /* Full screen height */
   position: relative;
-  height: 100vh; /* Ensure the section takes full viewport height */
-  background-color: #000;
+  background-color: #000; /* Background for better visibility */
+  overflow: hidden;
 }
 
 .highlight-images {
@@ -94,72 +94,39 @@ body {
 
 .image-container {
   flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
+  width: 50%; /* Each image takes half of the screen */
   height: 100%;
+  overflow: hidden;
   position: relative;
-  animation: split-expand-horizontal 1.5s ease forwards;
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.5);
-  transition: transform 1.5s ease-out;
+  transform: scale(1.5); /* Start zoomed in */
+  transition: transform 1.5s ease-out; /* Smooth zoom-out */
 }
 
-.image-container img:first-of-type {
-  content: url("https://ik.imagekit.io/juuconti/IMG_6506.png?updatedAt=1736350741520");
-}
-
-.image-container img:last-of-type {
-  content: url("https://ik.imagekit.io/juuconti/portfolioshirt-tallsmall.png?updatedAt=1736350119246");
-}
-
-.image-container img.visible {
-  transform: scale(1); /* Smooth zoom out */
+.image-container:hover img {
+  transform: scale(1); /* Zoom out on hover */
 }
 
 .image-title {
   position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: #fff;
   font-size: 2rem;
   font-weight: bold;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Animation for Horizontal Split */
-@keyframes split-expand-horizontal {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 50%;
-  }
+  z-index: 5;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-  .hero-content svg {
-    width: 100px;
-  }
-
-  .hero-content p {
-    font-size: 1.2rem;
-  }
-
-  .navbar ul li a {
-    font-size: 1rem;
-  }
-
-  .image-title {
-    font-size: 1.5rem;
-  }
-
   .highlight-images {
     flex-direction: column;
   }
@@ -168,7 +135,12 @@ body {
     width: 100%;
     height: 50%;
   }
+
+  .image-title {
+    font-size: 1.5rem;
+  }
 }
+
 .home {
   display: flex;
   align-items: center;
