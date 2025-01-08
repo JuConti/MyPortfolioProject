@@ -157,7 +157,7 @@ body {
   color: white;
   animation: fadeInUp 1.5s ease;
   font-weight: lighter;
-  font-size: 10;
+  font-size: 18px;
   text-indent: 5%;
 }
 
@@ -237,9 +237,8 @@ body {
 }
 
 .parallax {
-  height: 50vh;
+  height: 100vh;
   background-color: black;
-    no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -247,10 +246,11 @@ body {
   text-align: center;
   position: relative;
   margin-top: 500px;
+  font-size: 10;
 }
 
 .parallax h2 {
-  font-size: 1rem;
+  font-size: 3rem;
 }
 
 .container {
