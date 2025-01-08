@@ -237,7 +237,7 @@ body {
 }
 
 .parallax {
-  height: 500px;
+  height: 50vh;
   background: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397")
     no-repeat center center/cover;
   display: flex;
