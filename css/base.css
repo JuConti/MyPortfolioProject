@@ -82,6 +82,8 @@ body {
   overflow: hidden;
   position: relative;
   height: 100vh; /* Ensure the section takes full viewport height */
+  margin-bottom: 50px; /* Add spacing below the section */
+  background-color: #000; /* Background for better visibility */
 }
 
 .highlight-images {
@@ -121,7 +123,7 @@ body {
   position: absolute;
   color: #fff;
   font-size: 2rem;
-  font-weight: light;
+  font-weight: lighter;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
@@ -145,7 +147,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background: url("https://ik.imagekit.io/juuconti/f-airjordan-2.png?updatedAt=1736369784611")
+  background: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397")
     no-repeat center center/cover;
   position: relative;
 }
@@ -154,6 +156,7 @@ body {
   text-align: center;
   color: white;
   animation: fadeInUp 1.5s ease;
+  font-weight: lighter;
 }
 
 .scroll-hint {
@@ -164,11 +167,14 @@ body {
   animation: fadeIn 3s infinite;
 }
 
+/* About Section */
 .about {
   display: flex;
   flex-wrap: wrap;
-  padding: 50px 20px;
+  padding: 100px 20px; /* Ensure spacing around the section */
   background-color: #f8f8f8;
+  position: relative; /* Ensure it doesn't overlap with previous sections */
+  margin-top: 50px; /* Add spacing above the section */
 }
 
 .about-grid {
