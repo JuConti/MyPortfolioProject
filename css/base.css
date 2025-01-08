@@ -169,3 +169,168 @@ body {
     height: 50%;
   }
 }
+.home {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background: url("images/home-bg.jpg") no-repeat center center/cover;
+  position: relative;
+}
+
+.home-content {
+  text-align: center;
+  color: white;
+  animation: fadeInUp 1.5s ease;
+}
+
+.scroll-hint {
+  position: absolute;
+  bottom: 20px;
+  font-size: 1.2rem;
+  color: white;
+  animation: fadeIn 3s infinite;
+}
+
+.about {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 50px 20px;
+  background-color: #f8f8f8;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.about-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+
+.about-image img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+.portfolio {
+  padding: 50px 20px;
+  background: #ffffff;
+}
+
+.portfolio-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.portfolio-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.portfolio-item img,
+.portfolio-item video {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+
+.portfolio-description {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-description {
+  transform: translateY(0);
+}
+
+.parallax {
+  height: 100vh;
+  background: url("images/parallax-bg.jpg") no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+.parallax h2 {
+  font-size: 3rem;
+}
+
+.contact {
+  padding: 50px 20px;
+  background: #e8eaf6;
+  text-align: center;
+}
+
+.contact h2 {
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background: #6e8efb;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer .social-icons img {
+  width: 30px;
+  margin: 0 10px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
