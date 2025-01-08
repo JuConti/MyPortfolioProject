@@ -20,14 +20,14 @@ const highlightImages = document.querySelectorAll(".highlight-images .image-cont
 
 highlightImages.forEach((img, index) => {
     img.style.transformOrigin = index % 2 === 0 ? "left center" : "right center";
-    img.style.transform = "scaleX(0)";
+    img.style.transform = "scaleY(0)";
 });
 
 const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
         if (entry.isIntersecting) {
             entry.target.style.transition = "transform 1.2s ease-out";
-            entry.target.style.transform = "scaleX(1)";
+            entry.target.style.transform = "scaleY(1)";
             observer.unobserve(entry.target);
         }
     });
