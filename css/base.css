@@ -1,33 +1,93 @@
 /* Main Stylesheet */
-body {
+/* General Reset */
+body,
+h1,
+p,
+ul,
+li,
+a {
   margin: 0;
-  font-family: "Poppins", sans-serif;
-  color: #333;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
   overflow-x: hidden;
 }
 
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.header {
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white;
+/* Hero Section */
+.hero-section {
+  height: 100vh;
+  background: url("your-background-image.jpg") no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
   text-align: center;
-  padding: 50px 20px;
+  color: #fff;
 }
 
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
+/* Navbar */
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
 }
 
-.hero p {
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar ul li {
+  margin: 0 15px;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #f0c041;
+}
+
+/* Hero Content */
+.hero-content h1 {
+  font-size: 4rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content p {
   font-size: 1.5rem;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .navbar ul li a {
+    font-size: 1rem;
+  }
 }
 
 .home {
