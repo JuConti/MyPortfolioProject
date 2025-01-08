@@ -157,9 +157,8 @@ body {
   color: white;
   animation: fadeInUp 1.5s ease;
   font-weight: lighter;
-  margin-left: 5px;
-  margin-right: 5px;
-  font-size: 14px;
+  font-size: 18px;
+  text-indent: 10px;
 }
 
 .scroll-hint {
