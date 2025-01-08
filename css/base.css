@@ -119,7 +119,7 @@ body {
 }
 
 .image-container img:last-of-type {
-  content: url("https://ik.imagekit.io/juuconti/portfolioshirt-tallsmall.png?updatedAt=1736350119246&tr=n-ik_ml_thumbnail");
+  content: url("https://ik.imagekit.io/juuconti/portfolioshirt-tallsmall.png?updatedAt=1736350119246");
 }
 
 .image-title {
