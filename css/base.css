@@ -159,7 +159,6 @@ body {
   font-weight: lighter;
   font-size: 18;
   text-indent: 5%;
-  position: relative;
 }
 
 .scroll-hint {
@@ -176,8 +175,7 @@ body {
   flex-wrap: wrap;
   padding: 100px 20px; /* Ensure spacing around the section */
   background-color: #f8f8f8;
-  position: 800px;
-  margin-top: -800px; /* Ensure it doesn't overlap with previous sections */
+  margin-top: 50px; /* Ensure it doesn't overlap with previous sections */
   /* Add spacing above the section */
 }
 
