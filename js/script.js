@@ -16,24 +16,34 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     // Image growth animation for highlight section
+    // Image growth animation for highlight section
+document.addEventListener("DOMContentLoaded", () => {
     const highlightImages = document.querySelectorAll(".highlight-images .image-container img");
-
-    highlightImages.forEach((img, index) => {
-        img.style.transformOrigin = index % 2 === 0 ? "left center" : "right center";
-        img.style.transform = "scaleX(0)";
+  
+    // Initial setup: Images start zoomed in and collapsed vertically
+    highlightImages.forEach((img) => {
+      img.style.transformOrigin = "center"; // Expand from the horizontal center
+      img.style.transform = "scale(1.5) scaleY(0)"; // Zoomed in and collapsed
     });
-
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.transition = "transform 1.2s ease-out";
-                entry.target.style.transform = "scaleX(1)";
-                observer.unobserve(entry.target);
-            }
+  
+    // Intersection Observer to trigger animations when images enter viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.style.transition = "transform 1.5s ease-out"; // Smooth animation
+            entry.target.style.transform = "scale(1) scaleY(1)"; // Full height and zoomed out
+            observer.unobserve(entry.target); // Stop observing after animation
+          }
         });
-    }, { threshold: 0.5 });
-
-    highlightImages.forEach(img => observer.observe(img));
+      },
+      { threshold: 0.5 } // Trigger when 50% of the image is visible
+    );
+  
+    // Observe each image
+    highlightImages.forEach((img) => observer.observe(img));
+  });
+  
 
     // Parallax effect for about section
     const parallaxContainer = document.querySelector(".parallax-container");

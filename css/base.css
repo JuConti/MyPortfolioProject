@@ -97,38 +97,18 @@ body {
 .image-container {
   flex: 1;
   width: 50%; /* Each image takes half of the screen */
-  height: 0; /* Start collapsed */
+  height: 100%;
   overflow: hidden;
   position: relative;
-  animation: expand-vertical 1.5s ease forwards; /* Expand effect */
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.5); /* Start zoomed in */
-  animation: zoom-out 1.5s ease forwards; /* Smooth zoom-out effect */
-}
-
-/* Keyframes for expanding from the middle */
-@keyframes expand-vertical {
-  0% {
-    height: 0; /* Collapsed */
-  }
-  100% {
-    height: 100%; /* Full height */
-  }
-}
-
-/* Keyframes for zooming out */
-@keyframes zoom-out {
-  0% {
-    transform: scale(1.5); /* Zoomed in */
-  }
-  100% {
-    transform: scale(1); /* Original size */
-  }
+  transform-origin: center; /* Transformation starts from the center */
+  transform: scale(1.5) scaleY(0); /* Start zoomed in and collapsed vertically */
+  transition: transform 1.5s ease-out; /* Smooth transition for both effects */
 }
 
 /* Image Title (Optional for your setup) */
