@@ -1,51 +1,66 @@
+document.addEventListener("DOMContentLoaded", () => {
+    // Smooth scrolling for anchor links
+    const navLinks = document.querySelectorAll(".navbar a");
 
-  // Main JavaScript File
+    navLinks.forEach(link => {
+        link.addEventListener("click", event => {
+            event.preventDefault();
+            const targetId = link.getAttribute("href").slice(1);
+            const targetElement = document.getElementById(targetId);
 
-// Smooth Scroll for Navbar Links
-document.querySelectorAll('.navbar a').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        target.scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
+            window.scrollTo({
+                top: targetElement.offsetTop,
+                behavior: "smooth"
+            });
         });
     });
-});
 
-// Scroll Animation for Portfolio Items
-const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('show');
-        } else {
-            entry.target.classList.remove('show');
-        }
+    // Image growth animation for highlight section
+    const highlightImages = document.querySelectorAll(".highlight-images .image-container img");
+
+    highlightImages.forEach((img, index) => {
+        img.style.transformOrigin = index % 2 === 0 ? "left center" : "right center";
+        img.style.transform = "scaleX(0)";
     });
-}, { threshold: 0.1 });
 
-document.querySelectorAll('.portfolio-item').forEach(item => {
-    observer.observe(item);
-});
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.transition = "transform 1.2s ease-out";
+                entry.target.style.transform = "scaleX(1)";
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
 
-// Parallax Effect
-window.addEventListener('scroll', () => {
-    const parallax = document.querySelector('.parallax');
-    const scrollPosition = window.scrollY;
-    parallax.style.backgroundPositionY = `${scrollPosition * 0.5}px`;
-});
+    highlightImages.forEach(img => observer.observe(img));
 
-// Contact Form Validation
-document.querySelector('.contact-form form').addEventListener('submit', e => {
-    e.preventDefault();
-    const name = e.target.querySelector('input[type="text"]').value;
-    const email = e.target.querySelector('input[type="email"]').value;
-    const message = e.target.querySelector('textarea').value;
+    // Parallax effect for about section
+    const parallaxContainer = document.querySelector(".parallax-container");
+    const parallaxBackground = parallaxContainer.querySelector(".parallax");
 
-    if (name && email && message) {
-        alert('Thank you for reaching out!');
-        e.target.reset();
-    } else {
-        alert('Please fill in all fields before submitting.');
-    }
+    window.addEventListener("scroll", () => {
+        const offset = window.pageYOffset;
+        const parallaxSpeed = 0.3;
+        parallaxBackground.style.transform = `translateY(${offset * parallaxSpeed}px)`;
+    });
+
+    // Grid image animations in portfolio section
+    const gridImages = document.querySelectorAll(".portfolio-grid .grid-image-container img");
+
+    gridImages.forEach(img => {
+        img.style.transform = "scale(0)";
+        img.style.transition = "transform 0.8s ease-out";
+    });
+
+    const gridObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.transform = "scale(1)";
+                gridObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.5 });
+
+    gridImages.forEach(img => gridObserver.observe(img));
 });
