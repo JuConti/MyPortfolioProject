@@ -175,8 +175,9 @@ body {
   flex-wrap: wrap;
   padding: 100px 20px; /* Ensure spacing around the section */
   background-color: #f8f8f8;
-  position: relative; /* Ensure it doesn't overlap with previous sections */
-  margin-top: 50px; /* Add spacing above the section */
+  position: relative;
+  margin-top: -600px; /* Ensure it doesn't overlap with previous sections */
+  /* Add spacing above the section */
 }
 
 .about-grid {
