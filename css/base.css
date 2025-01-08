@@ -238,7 +238,7 @@ body {
 
 .parallax {
   height: 50vh;
-  background: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397")
+  background-color: black;
     no-repeat center center/cover;
   display: flex;
   align-items: center;
@@ -246,7 +246,7 @@ body {
   color: white;
   text-align: center;
   position: relative;
-  margin-top: 50px;
+  margin-top: 500px;
 }
 
 .parallax h2 {
