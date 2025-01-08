@@ -245,10 +245,11 @@ body {
   justify-content: center;
   color: white;
   text-align: center;
+  position: relative;
 }
 
 .parallax h2 {
-  font-size: 3rem;
+  font-size: 1rem;
 }
 
 .container {
