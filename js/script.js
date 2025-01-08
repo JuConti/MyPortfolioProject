@@ -42,7 +42,7 @@ highlightImages.forEach(img => observer.observe(img));
     const parallaxBackground = parallaxContainer.querySelector(".parallax");
 
     window.addEventListener("scroll", () => {
-        const offset = window.pageYOffset;
+        const offset = window.scrollY;
         const parallaxSpeed = 0.3;
         parallaxBackground.style.transform = `translateY(${offset * parallaxSpeed}px)`;
     });
