@@ -104,12 +104,12 @@ body {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.5); /* Start zoomed in */
+  transform: scale(1.5) translateY(-10%); /* Start zoomed in */
   transition: transform 1.5s ease-out; /* Smooth zoom-out */
 }
 
 .image-container:hover img {
-  transform: scale(1); /* Zoom out on hover */
+  transform: scale(1) translateY(0); /* Zoom out on hover */
 }
 
 .image-title {
@@ -128,7 +128,7 @@ body {
 /* Responsive Design */
 @media (max-width: 768px) {
   .highlight-images {
-    flex-direction: column-reverse;
+    flex-direction: column;
   }
 
   .image-container {
