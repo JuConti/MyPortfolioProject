@@ -176,7 +176,7 @@ body {
   flex-wrap: wrap;
   padding: 100px 20px; /* Ensure spacing around the section */
   background-color: #f8f8f8;
-  position: relative;
+  position: 800px;
   margin-top: -800px; /* Ensure it doesn't overlap with previous sections */
   /* Add spacing above the section */
 }
