@@ -246,6 +246,7 @@ body {
   color: white;
   text-align: center;
   position: relative;
+  margin-top: -600px;
 }
 
 .parallax h2 {
