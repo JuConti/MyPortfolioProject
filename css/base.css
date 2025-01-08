@@ -5,14 +5,14 @@ p,
 ul,
 li,
 a {
-  margin: 0;
-  padding: 0;
+  margin: 5;
+  padding: 5;
   box-sizing: border-box;
 }
 
 body {
   font-family: "Arial", sans-serif;
-  line-height: 1.6;
+  line-height: 1;
   overflow-x: hidden;
 }
 
@@ -50,7 +50,7 @@ body {
 
 .navbar ul li a {
   text-decoration: none;
-  font-weight: bold;
+  font-weight: lighter;
   font-size: 1.2rem;
   color: #fff;
   transition: color 0.3s;
@@ -122,7 +122,7 @@ body {
 .image-title {
   position: absolute;
   color: #fff;
-  font-size: 2rem;
+  font-size: 20px;
   font-weight: lighter;
   text-transform: uppercase;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
@@ -162,7 +162,7 @@ body {
 .scroll-hint {
   position: absolute;
   bottom: 20px;
-  font-size: 1.2rem;
+  font-size: 1 rem;
   color: white;
   animation: fadeIn 3s infinite;
 }
@@ -185,8 +185,8 @@ body {
 }
 
 .about-text {
-  font-size: 1.2rem;
-  line-height: 1.6;
+  font-size: 1 rem;
+  line-height: 1;
 }
 
 .about-image img {
@@ -236,7 +236,8 @@ body {
 
 .parallax {
   height: 100vh;
-  background: url("images/parallax-bg.jpg") no-repeat center center/cover;
+  background: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397")
+    no-repeat center center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
