@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
 const highlightImages = document.querySelectorAll(".highlight-images .image-container img");
 
 highlightImages.forEach((img, index) => {
-    img.style.transformOrigin = index % 2 === 0 ? "center" : "center";
+    img.style.transformOrigin = index % 2 === 0 ? "left-center" : "right-center";
     img.style.transform = "scaleX(0)";
 });
 
