@@ -104,14 +104,6 @@ body {
   transition: transform 1.5s ease-out;
 }
 
-.image-container img:first-of-type {
-  content: url("https://example.com/first-image-url.jpg");
-}
-
-.image-container img:last-of-type {
-  content: url("https://example.com/second-image-url.jpg");
-}
-
 .image-container img {
   width: 100%;
   height: 100%;
