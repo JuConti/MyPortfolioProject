@@ -95,21 +95,23 @@ body {
 .image-container {
   flex: 1;
   width: 50%; /* Each image takes half of the screen */
-  height: 100%;
+  height: 0; /* Start with no height */
   overflow: hidden;
   position: relative;
+  animation: split-expand-zoom 1.5s ease forwards; /* Trigger animation */
 }
 
 .image-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: scale(1.5) translateY(-10%); /* Start zoomed in */
-  transition: transform 1.5s ease-out; /* Smooth zoom-out */
+  transform: scale(1.5); /* Start zoomed in */
+  transition: transform 1.5s ease-out; /* Smooth zoom-out effect */
 }
 
-.image-container:hover img {
-  transform: scale(1) translateY(0); /* Zoom out on hover */
+/* Zoom-out on animation completion */
+.image-container img {
+  animation: zoom-out 1.5s ease-out forwards;
 }
 
 .image-title {
@@ -123,6 +125,25 @@ body {
   text-transform: uppercase;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
   z-index: 5;
+}
+
+/* Keyframes for Split-Expand and Zoom-Out */
+@keyframes split-expand-zoom {
+  0% {
+    height: 0; /* Start with zero height */
+  }
+  100% {
+    height: 100%; /* Expand to full height */
+  }
+}
+
+@keyframes zoom-out {
+  0% {
+    transform: scale(1.5); /* Start zoomed in */
+  }
+  100% {
+    transform: scale(1); /* End at normal size */
+  }
 }
 
 /* Responsive Design */
