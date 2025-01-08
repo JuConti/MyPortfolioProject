@@ -115,11 +115,11 @@ body {
 }
 
 .image-container img:first-of-type {
-  content: url("https://example.com/first-image.jpg");
+  content: url("https://ik.imagekit.io/juuconti/IMG_6506.png?updatedAt=1736350741520");
 }
 
 .image-container img:last-of-type {
-  content: url("https://example.com/second-image.jpg");
+  content: url("https://ik.imagekit.io/juuconti/portfolioshirt-tallsmall.png?updatedAt=1736350119246&tr=n-ik_ml_thumbnail");
 }
 
 .image-title {
