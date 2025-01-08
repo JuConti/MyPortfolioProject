@@ -19,8 +19,8 @@ body {
 /* Hero Section */
 .hero-section {
   height: 100vh;
-  background: url("https://example.com/your-background-image.jpg") no-repeat
-    center center/cover;
+  background: url("https://ik.imagekit.io/juuconti/portfoliobackgroundcover.png?updatedAt=1736351520183")
+    no-repeat center center/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -112,11 +112,11 @@ body {
 }
 
 .image-container img:first-of-type {
-  content: url("https://example.com/first-image-url.jpg");
+  content: url("https://ik.imagekit.io/juuconti/IMG_6506.png?updatedAt=1736350741520");
 }
 
 .image-container img:last-of-type {
-  content: url("https://example.com/second-image-url.jpg");
+  content: url("https://ik.imagekit.io/juuconti/portfolioshirt-tallsmall.png?updatedAt=1736350119246");
 }
 
 .image-container img.visible {
