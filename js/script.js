@@ -14,48 +14,36 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     });
-
-   // Image growth animation for highlight section
-document.addEventListener("DOMContentLoaded", () => {
-    const highlightImages = document.querySelectorAll(".highlight-images .image-container img");
-    const imageTitles = document.querySelectorAll(".highlight-images .image-container .image-title");
-  
-    // Initial setup: Images start zoomed in and collapsed vertically; text is hidden
-    highlightImages.forEach((img) => {
-      img.style.transformOrigin = "center"; // Expand from the horizontal center
-      img.style.transform = "scale(1.5) scaleY(0)"; // Zoomed in and collapsed
-    });
-  
-    imageTitles.forEach((title) => {
-      title.style.opacity = "0"; // Hide titles initially
-    });
-  
-    // Intersection Observer to trigger animations when images and texts enter viewport
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const img = entry.target.querySelector("img");
-            const title = entry.target.querySelector(".image-title");
-  
-            // Trigger image animation
-            img.style.transition = "transform 1.5s ease-out"; // Smooth animation
-            img.style.transform = "scale(1) scaleY(1)"; // Full height and zoomed out
-  
-            // Trigger text animation
-            title.style.transition = "opacity 1.5s ease-out"; // Smooth fade-in
-            title.style.opacity = "1"; // Show text
-  
-            observer.unobserve(entry.target); // Stop observing after animation
-          }
-        });
-      },
-      { threshold: 0.5 } // Trigger when 50% of the image is visible
-    );
-  
-    // Observe each image container
-    document.querySelectorAll(".image-container").forEach((container) => observer.observe(container));
-  });
+    
+// Image growth animation for highlight section
+    document.addEventListener("DOMContentLoaded", () => {
+        const imageContainers = document.querySelectorAll(".image-container");
+      
+        // Intersection Observer to trigger animations
+        const observer = new IntersectionObserver(
+          (entries) => {
+            entries.forEach((entry) => {
+              if (entry.isIntersecting) {
+                const img = entry.target.querySelector("img");
+                const title = entry.target.querySelector(".image-title");
+      
+                // Trigger animations
+                img.style.transition = "transform 1.5s ease-out";
+                img.style.transform = "scale(1) scaleY(1)";
+                title.style.transition = "opacity 1.5s ease-out";
+                title.style.opacity = "1";
+      
+                // Unobserve after animation
+                observer.unobserve(entry.target);
+              }
+            });
+          },
+          { threshold: 0.5 }
+        );
+      
+        imageContainers.forEach((container) => observer.observe(container));
+      });
+      
   
 
     // Parallax effect for about section
