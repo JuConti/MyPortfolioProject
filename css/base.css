@@ -199,6 +199,39 @@ body {
   border-radius: 10px;
 }
 
+/* Parallax Container */
+.parallax {
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  position: absolute;
+  font-size: 10;
+}
+
+.parallax-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  position: absolute;
+}
+
+.parallax-text {
+  font-size: 18px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.parallax h2 {
+  font-size: 1, 5rem;
+}
+/* Parallax Container */
+
 .portfolio {
   padding: 50px 20px;
   background: #ffffff;
@@ -237,30 +270,6 @@ body {
 
 .portfolio-item:hover .portfolio-description {
   transform: translateY(0);
-}
-
-/* Parallax Container */
-.parallax {
-  height: 100vh;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  position: absolute;
-  font-size: 10;
-  font-size: 10;
-}
-
-.parallax-text {
-  font-size: 18px;
-  margin-left: 5%;
-  margin-right: 5%;
-}
-
-.parallax h2 {
-  font-size: 1, 5rem;
 }
 
 .container {
