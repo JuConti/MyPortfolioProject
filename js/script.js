@@ -37,27 +37,20 @@ highlightImages.forEach(img => observer.observe(img));
       
   // Parallax effect
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const parallaxContainer = document.querySelector(".parallax-container");
-    const parallaxBackground = parallaxContainer.querySelector(".parallax-background");
-
-    window.addEventListener("scroll", () => {
-        const offset = window.scrollY;
-        console.log("Scroll detected. Offset:", offset);
-        const parallaxSpeed = 0.3;
-        parallaxBackground.style.transform = `translateY(${offset * parallaxSpeed}px)`;
-    
-        if (parallaxContainer) {
-            // Calculate the offset only when the container is in view
-            const containerOffset = parallaxContainer.offsetTop;
-            const containerHeight = parallaxContainer.offsetHeight;
-
-            if (offset >= containerOffset - window.innerHeight && offset <= containerOffset + containerHeight) {
-                parallaxBackground.style.transform = `translateY(${(offset - containerOffset) * parallaxSpeed}px)`;
-            }
-        }
-    });
-});
+  const parallaxContainer = document.querySelector(".parallax-container");
+  const parallaxBackground = parallaxContainer.querySelector(".parallax-background");
+  
+  if (parallaxContainer && parallaxBackground) {
+      window.addEventListener("scroll", () => {
+          const offset = window.scrollY;
+          const parallaxSpeed = 0.3;
+          console.log(`Applying transform: translateY(${offset * parallaxSpeed}px)`);
+          parallaxBackground.style.transform = `translateY(${offset * parallaxSpeed}px)`;
+      });
+  } else {
+      console.error("Parallax container or background not found!");
+  }
+  
 
 
 // Parallax effect
