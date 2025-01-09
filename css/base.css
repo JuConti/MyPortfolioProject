@@ -10,14 +10,9 @@ a {
   box-sizing: border-box;
 }
 
-.body {
-  font-family: "Raleway", serif;
-  font-optical-sizing: auto;
-  font-weight: 100;
-  font-style: normal;
-}
-
 body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
   line-height: 1;
   overflow-x: hidden;
 }
