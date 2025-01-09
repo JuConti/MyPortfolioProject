@@ -129,7 +129,7 @@ body {
   background-size: cover;
   transform: translateY(0);
   transition: transform 0.3s ease-out; /* Smooth scrolling effect */
-  background-position: center;
+  background-position: center !important;
 }
 
 /* Content Styling */
