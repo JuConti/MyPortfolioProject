@@ -165,7 +165,7 @@ body {
 
 .scroll-hint {
   position: absolute;
-  bottom: 20px;
+  bottom: 0px;
   font-size: 1 rem;
   color: white;
   animation: fadeIn 3s infinite;
@@ -175,9 +175,9 @@ body {
 .about {
   display: flex;
   flex-wrap: wrap;
-  padding: 100px 20px; /* Ensure spacing around the section */
+  padding: 20px 20px; /* Ensure spacing around the section */
   background-color: #f8f8f8;
-  margin-top: 50px; /* Ensure it doesn't overlap with previous sections */
+  /* Ensure it doesn't overlap with previous sections */
   /* Add spacing above the section */
 }
 
@@ -250,12 +250,12 @@ body {
   position: relative;
   margin-top: 500px;
   font-size: 10;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 .parallax-text {
   font-size: 18px;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .parallax h2 {
