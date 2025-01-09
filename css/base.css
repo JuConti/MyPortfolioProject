@@ -109,7 +109,7 @@ body {
 .about {
   display: flex;
   flex-wrap: wrap;
-  padding: 20px 20px; /* Ensure spacing around the section */
+  padding: 40px 20px; /* Ensure spacing around the section */
   background-color: #f8f8f8;
   margin-top: 20px;
   position: relative;
