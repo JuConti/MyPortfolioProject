@@ -208,77 +208,41 @@ body {
 }
 
 /* Parallax Container */
-/* Reset */
-body,
-html {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: Arial, sans-serif;
-}
-
-/* Parallax Container */
 .parallax-container {
-  height: 100vh; /* Full viewport height */
+  height: 100vh;
   overflow: hidden;
   position: relative;
 }
 
-/* Parallax Effect for Background */
 .parallax {
-  height: 200vh; /* Double viewport height to create scrollable effect */
-  background-image: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-attachment: fixed; /* Key property for parallax effect */
   position: absolute;
   top: 0;
+  left: 0;
   width: 100%;
-  z-index: -1; /* Push background behind content */
+  height: 200%; /* Make the background larger for the parallax effect */
+  background: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397")
+    no-repeat center center / cover;
+  transform: translateY(0);
+  will-change: transform; /* Performance optimization */
 }
 
-/* Text and Content */
-.parallax-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  color: white;
-}
-
-.parallax-container h2 {
+.parallax h2 {
+  position: relative;
+  z-index: 1;
   font-size: 2rem;
-  margin: 0;
+  color: white;
+  text-align: center;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
 
 .parallax-text {
+  position: relative;
+  z-index: 1;
   font-size: 1.2rem;
-  margin-top: 1rem;
+  color: white;
+  margin: 0 5%;
+  text-align: center;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-}
-
-/* Optional Styling for Additional Sections (if needed) */
-section {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.5rem;
-}
-
-section:nth-child(odd) {
-  background: #f4f4f4;
-  color: #333;
-}
-
-section:nth-child(even) {
-  background: #333;
-  color: #fff;
 }
 
 /* Parallax Container */
