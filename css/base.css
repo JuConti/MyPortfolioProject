@@ -306,10 +306,12 @@ body {
   padding: 50px 20px;
   background: #e3e3e3;
   text-align: center;
+  font-size: 18px;
 }
 
 .contact h2 {
   margin-bottom: 20px;
+  font-size: 30px;
 }
 
 .contact-form {
