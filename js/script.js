@@ -37,15 +37,7 @@ highlightImages.forEach(img => observer.observe(img));
       
   
 
-    // Parallax effect for about section
-    const parallaxContainer = document.querySelector(".parallax-container");
-    const parallaxBackground = parallaxContainer.querySelector(".parallax");
-
-    window.addEventListener("scroll", () => {
-        const offset = window.scrollY;
-        const parallaxSpeed = 0.3;
-        parallaxBackground.style.transform = `translateY(${offset * parallaxSpeed}px)`;
-    });
+  
 
     // Grid image animations in portfolio section
     const gridImages = document.querySelectorAll(".portfolio-grid .grid-image-container img");
