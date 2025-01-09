@@ -4,7 +4,7 @@ Welcome to my portfolio web! This project showcases my portfolio and a glimpse o
 
 ## Demo
 
-You can view the live site at: [https://github.com/JuConti/MyPortfolioProject.git](https://github.com/JuConti/MyPortfolioProject.git)
+You can view the live site at: [https://juconti.github.io/MyPortfolioProject/](https://juconti.github.io/MyPortfolioProject/)
 
 ## Features
 
