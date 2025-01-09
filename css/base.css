@@ -177,6 +177,7 @@ body {
   flex-wrap: wrap;
   padding: 20px 20px; /* Ensure spacing around the section */
   background-color: #f8f8f8;
+  margin-top: 20px;
   /* Ensure it doesn't overlap with previous sections */
   /* Add spacing above the section */
 }
@@ -240,7 +241,7 @@ body {
 
 /* Parallax Container */
 .parallax {
-  height: calc(100% - 1vh);
+  height: calc(100% - 10vh);
   background-color: black;
   display: flex;
   align-items: center;
@@ -248,7 +249,7 @@ body {
   color: white;
   text-align: center;
   position: relative;
-  margin-top: 500px;
+  margin-top: calc(100vh - var(--header-height) - var(--footer-height));
   font-size: 10;
 }
 
@@ -259,7 +260,7 @@ body {
 }
 
 .parallax h2 {
-  font-size: 3rem;
+  font-size: 1, 5rem;
 }
 
 .container {
