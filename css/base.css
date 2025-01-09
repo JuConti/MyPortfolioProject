@@ -231,51 +231,26 @@ body {
 
 /* Parallax Background */
 .parallax {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150%; /* Make it taller for the parallax effect */
-  background-image: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397");
-  background-size: cover;
-  background-position: center;
-  z-index: -1; /* Send it behind all other elements */
-  transform: translateY(-20%); /* Start slightly "above" */
-  will-change: transform; /* Optimize for better performance */
-}
-
-/* Fix the movement of the background during scroll */
-.parallax-container::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 150%; /* Matches the parallax height */
-  background-attachment: fixed; /* Enables the parallax effect */
-  background-image: inherit;
-  background-size: inherit;
-  background-position: inherit;
-  z-index: -2; /* Ensures it stays behind the content */
-}
-
-/* Parallax Content (text, etc.) */
-.parallax-container h2 {
-  position: relative;
-  z-index: 1;
+  height: 100vh;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
-  font-size: 2rem;
-  margin: 0;
+  text-align: center;
+  position: relative;
+  margin-top: 500px;
+  font-size: 10;
 }
 
 .parallax-text {
-  position: relative;
-  z-index: 1;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  font-size: 1.2rem;
-  margin-top: 1rem;
+  font-size: 18px;
+  margin-left: 5%;
+  margin-right: 5%;
+}
+
+.parallax h2 {
+  font-size: 1, 5rem;
 }
 
 /* Ensure other sections don't overlap */
