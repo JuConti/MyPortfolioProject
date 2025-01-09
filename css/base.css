@@ -134,9 +134,13 @@ body {
 }
 
 /* Parallax Container */
+.parallax-container {
+  height: 400px; /* Ensure this aligns with your parallax image */
+  overflow: hidden;
+}
 
 .parallax {
-  height: 100vh; /* Full viewport height */
+  height: 100%px; /* Full viewport height */
   background-color: black;
   display: flex;
   align-items: center;
