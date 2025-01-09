@@ -200,36 +200,51 @@ body {
 }
 
 /* Parallax Container */
-.parallax {
-  height: 100vh;
-  background-color: black;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-align: center;
-  position: absolute;
-  font-size: 10;
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
 }
 
+/* Parallax Container */
 .parallax-container {
   height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  position: absolute;
+  overflow: hidden;
+  position: relative;
 }
 
-.parallax-text {
-  font-size: 18px;
-  margin-left: 5%;
-  margin-right: 5%;
+.parallax {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200%; /* Make the background larger for the parallax effect */
+  background: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397")
+    no-repeat center center / cover;
+  transform: translateY(0);
+  will-change: transform; /* Performance optimization */
 }
 
 .parallax h2 {
-  font-size: 1, 5rem;
+  position: relative;
+  z-index: 1;
+  font-size: 2rem;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
 }
+
+.parallax-text {
+  position: relative;
+  z-index: 1;
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 5%;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
 /* Parallax Container */
 
 .portfolio {
