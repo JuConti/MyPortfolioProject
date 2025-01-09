@@ -159,7 +159,9 @@ body {
   animation: fadeInUp 1.5s ease;
   font-weight: lighter;
   font-size: 18px;
-  text-indent: 10%;
+  text-indent: 5%;
+  margin-left: 5%;
+  margin-right: 5%;
 }
 
 .scroll-hint {
