@@ -112,6 +112,8 @@ body {
   background-color: #f8f8f8;
   margin-top: 20px;
   position: relative;
+  margin: 0 auto; /* Center the section */
+
   /* Ensure it doesn't overlap with previous sections */
   /* Add spacing above the section */
 }
@@ -135,23 +137,27 @@ body {
 
 /* Parallax Container */
 .parallax-container {
+  position: relative;
   height: 400px; /* Ensure this aligns with your parallax image */
   overflow: hidden;
 }
 
 .parallax {
   height: 100%px; /* Full viewport height */
-  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
   color: white;
   text-align: center;
-  position: relative; /* Stay within document flow */
-  z-index: 1; /* Make sure it's above other elements */
-  margin: 0; /* Remove problematic margin */
+  position: absolute; /* Stay within document flow */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-size: cover;
+  background-attachment: fixed; /* Parallax effect */
+  background-position: center;
   font-size: 18px;
-  overflow: hidden; /* Prevent content overflow */
 }
 
 .parallax h2 {
