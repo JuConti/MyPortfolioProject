@@ -122,9 +122,9 @@ body {
 
 /* Parallax Background */
 .parallax-background {
-  position: relative;
-  top: -50vh;
-  right: 0;
+  position: absolute;
+  top: -600px;
+  left: 0;
   width: 100%;
   height: 120%; /* Slightly larger for smoother scrolling */
   background-size: cover;
