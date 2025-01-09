@@ -109,7 +109,6 @@ body {
   animation: fadeIn 3s infinite;
 }
 
-/* About Section */
 /* Parallax Container Styling */
 .parallax-container {
   position: relative;
@@ -140,30 +139,25 @@ body {
   padding: 2rem;
   text-align: center;
   color: #fff;
+  background: rgba(
+    0,
+    0,
+    0,
+    0.6
+  ); /* Optional: darken content background for readability */
   border-radius: 10px; /* Optional: rounded corners for content box */
 }
 
 .parallax-container h2 {
-  font-size: 0, 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
   font-family: "Raleway", sans-serif;
-  font-style: uppercase;
 }
 
 .parallax-container p {
-  font-size: 18px;
-  line-height: 0, 5;
+  font-size: 1.2rem;
+  line-height: 1.6;
   font-family: "Raleway", sans-serif;
-}
-
-.parallax h2 {
-  font-size: 1, 5rem;
-}
-
-.parallax-text {
-  font-size: 18px;
-  margin-left: 5%;
-  margin-right: 5%;
 }
 
 /* Parallax Container */
