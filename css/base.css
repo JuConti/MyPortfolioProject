@@ -97,6 +97,10 @@ body {
   padding-top: 70px;
 }
 
+.home-content h1 {
+  font-size: 0, 5rem;
+}
+
 .scroll-hint {
   position: absolute;
   bottom: 0px;
@@ -140,14 +144,15 @@ body {
 }
 
 .parallax-container h2 {
-  font-size: 1rem;
+  font-size: 0, 5rem;
   margin-bottom: 1rem;
   font-family: "Raleway", sans-serif;
+  font-style: uppercase;
 }
 
 .parallax-container p {
   font-size: 18px;
-  line-height: 1;
+  line-height: 1px;
   font-family: "Raleway", sans-serif;
 }
 
