@@ -37,15 +37,27 @@ highlightImages.forEach(img => observer.observe(img));
       
   // Parallax effect
 
-  const parallaxContainer = document.querySelector(".parallax-container");
-  const parallaxBackground = parallaxContainer.querySelector(".parallax");
+  document.addEventListener("DOMContentLoaded", () => {
+    const parallaxContainer = document.querySelector(".parallax-container");
+    const parallaxBackground = parallaxContainer.querySelector(".parallax-background");
 
-  window.addEventListener("scroll", () => {
-      const offset = window.scrollY;
-      const parallaxSpeed = 0.3;
-      parallaxBackground.style.transform = `translateY(${offset * parallaxSpeed}px)`;
-  });
-  
+    window.addEventListener("scroll", () => {
+        const offset = window.scrollY;
+        const parallaxSpeed = 0.3;
+
+        if (parallaxContainer) {
+            // Calculate the offset only when the container is in view
+            const containerOffset = parallaxContainer.offsetTop;
+            const containerHeight = parallaxContainer.offsetHeight;
+
+            if (offset >= containerOffset - window.innerHeight && offset <= containerOffset + containerHeight) {
+                parallaxBackground.style.transform = `translateY(${(offset - containerOffset) * parallaxSpeed}px)`;
+            }
+        }
+    });
+});
+
+
 // Parallax effect
 
 
