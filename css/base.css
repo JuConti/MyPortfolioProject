@@ -144,7 +144,7 @@ body {
 }
 
 .parallax-container h2 {
-  font-size: 0, 5rem;
+  font-size: 0, 2rem;
   margin-bottom: 1rem;
   font-family: "Raleway", sans-serif;
   font-style: uppercase;
@@ -152,7 +152,7 @@ body {
 
 .parallax-container p {
   font-size: 18px;
-  line-height: 1px;
+  line-height: 0, 5;
   font-family: "Raleway", sans-serif;
 }
 
