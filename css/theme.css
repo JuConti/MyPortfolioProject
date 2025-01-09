@@ -1,111 +1,169 @@
 :root {
-    /* Custom color palette */
-    --background: rgba(115, 91, 70, 1); /* #323B42 */
-    --foreground: rgba(242, 241, 240, 1); /* #FCFBF9 */
+  /* Custom color palette */
+  --background: #e3e3e3; /* #323B42 */
+  --foreground: #e3e3e3; /* #FCFBF9 */
 
-    --card: rgba(191, 160, 132, 1); /* #D9C7BE */
-    --card-foreground: hsla(209, 12%, 22%, 1); /* #323B42 */
+  --card: #e3e3e3; /* #D9C7BE */
+  --card-foreground: #333; /* #323B42 */
 
-    --popover: rgba(242, 48, 5, 1); /* #D9C7BE */
-    --popover-foreground: hsla(28, 31, 63, 1); /* #323B42 */
+  --popover: #fb6ea2; /* #D9C7BE */
+  --popover-foreground: #e3e3e3; /* #323B42 */
 
-    --primary: rgba(242, 48, 5, 1); /* #635B58 */
-    --primary-foreground: rgba(242, 241, 240, 1); /* #FCFBF9 */
+  --primary: #fb6ea2; /* #635B58 */
+  --primary-foreground: #9e41f0; /* #FCFBF9 */
 
-    --secondary: rgba(217, 127, 17, 1); /* #A59B95 */
-    --secondary-foreground: rgba(115, 91, 70, 1); /* #323B42 */
+  --secondary: #9e41f0; /* #A59B95 */
+  --secondary-foreground: #333; /* #323B42 */
 
-    --muted: rgba(242, 48, 5, 1); /* #8C817B */
-    --muted-foreground: rgba(242, 241, 240, 1); /* #FCFBF9 */
+  --muted: #fb6ea2; /* #8C817B */
+  --muted-foreground: #e3e3e3; /* #FCFBF9 */
 
-    --accent: rgba(217, 127, 17, 1); /* #B5A79F */
-    --accent-foreground: rgba(242, 48, 5, 1); /* #635B58 */
+  --accent: #333; /* #B5A79F */
+  --accent-foreground: #fb6ea2; /* #635B58 */
 
-    --destructive: rgba(115, 91, 70, 1); /* #3B3634 */
-    --destructive-foreground: rgba(242, 241, 240, 1); /* #FCFBF9 */
+  --destructive: #333; /* #3B3634 */
+  --destructive-foreground: #e3e3e3; /* #FCFBF9 */
 
-    --border: rgba(242, 48, 5, 1); /* #A59B95 */
-    --input: rgba(217, 127, 17, 1); /* #B5A79F */
-    --ring: rgba(115, 91, 70, 1); /* #323B42 */
+  --border: #fb6ea2; /* #A59B95 */
+  --input: #9e41f0; /* #B5A79F */
+  --ring: #333; /* #323B42 */
 
+  /* Combinations */
+  .card {
+    background-color: var(--card);
+    color: var(--card-foreground);
+  }
 
-    /* Combinations */
-    .card {
-        background-color: var(--card);
-        color: var(--card-foreground);
-    }
+  .popover {
+    background-color: var(--popover);
+    color: var(--popover-foreground);
+  }
 
-    .popover {
-        background-color: var(--popover);
-        color: var(--popover-foreground);
-    }
+  .primary {
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+  }
 
-    .primary {
-        background-color: var(--primary);
-        color: var(--primary-foreground);
-    }
+  .secondary {
+    background-color: var(--secondary);
+    color: var(--secondary-foreground);
+  }
 
-    .secondary {
-        background-color: var(--secondary);
-        color: var(--secondary-foreground);
-    }
+  .muted {
+    background-color: var(--muted);
+    color: var(--muted-foreground);
+  }
 
-    .muted {
-        background-color: var(--muted);
-        color: var(--muted-foreground);
-    }
+  .accent {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+  }
 
-    .accent {
-        background-color: var(--accent);
-        color: var(--accent-foreground);
-    }
-
-    .destructive {
-        background-color: var(--destructive);
-        color: var(--destructive-foreground);
-    }
+  .destructive {
+    background-color: var(--destructive);
+    color: var(--destructive-foreground);
+  }
 }
 /*option 1*/
 /* Color Theme Swatches in Hex */
-.YWFT-Lancaster-Font-1-hex { color: #D92E1E; }
-.YWFT-Lancaster-Font-2-hex { color: #BF2E21; }
-.YWFT-Lancaster-Font-3-hex { color: #D9756C; }
-.YWFT-Lancaster-Font-4-hex { color: #262525; }
-.YWFT-Lancaster-Font-5-hex { color: #F2F2F2; }
+.YWFT-Lancaster-Font-1-hex {
+  color: #d92e1e;
+}
+.YWFT-Lancaster-Font-2-hex {
+  color: #bf2e21;
+}
+.YWFT-Lancaster-Font-3-hex {
+  color: #d9756c;
+}
+.YWFT-Lancaster-Font-4-hex {
+  color: #262525;
+}
+.YWFT-Lancaster-Font-5-hex {
+  color: #f2f2f2;
+}
 
 /* Color Theme Swatches in RGBA */
-.YWFT-Lancaster-Font-1-rgba { color: rgba(216, 45, 30, 1); }
-.YWFT-Lancaster-Font-2-rgba { color: rgba(191, 45, 32, 1); }
-.YWFT-Lancaster-Font-3-rgba { color: rgba(216, 117, 108, 1); }
-.YWFT-Lancaster-Font-4-rgba { color: rgba(38, 37, 37, 1); }
-.YWFT-Lancaster-Font-5-rgba { color: rgba(242, 242, 242, 1); }
+.YWFT-Lancaster-Font-1-rgba {
+  color: rgba(216, 45, 30, 1);
+}
+.YWFT-Lancaster-Font-2-rgba {
+  color: rgba(191, 45, 32, 1);
+}
+.YWFT-Lancaster-Font-3-rgba {
+  color: rgba(216, 117, 108, 1);
+}
+.YWFT-Lancaster-Font-4-rgba {
+  color: rgba(38, 37, 37, 1);
+}
+.YWFT-Lancaster-Font-5-rgba {
+  color: rgba(242, 242, 242, 1);
+}
 
 /* Color Theme Swatches in HSLA */
-.YWFT-Lancaster-Font-1-hsla { color: hsla(5, 75, 48, 1); }
-.YWFT-Lancaster-Font-2-hsla { color: hsla(5, 70, 43, 1); }
-.YWFT-Lancaster-Font-3-hsla { color: hsla(5, 58, 63, 1); }
-.YWFT-Lancaster-Font-4-hsla { color: hsla(0, 1, 14, 1); }
-.YWFT-Lancaster-Font-5-hsla { color: hsla(0, 0, 95, 1); }
-
+.YWFT-Lancaster-Font-1-hsla {
+  color: hsla(5, 75, 48, 1);
+}
+.YWFT-Lancaster-Font-2-hsla {
+  color: hsla(5, 70, 43, 1);
+}
+.YWFT-Lancaster-Font-3-hsla {
+  color: hsla(5, 58, 63, 1);
+}
+.YWFT-Lancaster-Font-4-hsla {
+  color: hsla(0, 1, 14, 1);
+}
+.YWFT-Lancaster-Font-5-hsla {
+  color: hsla(0, 0, 95, 1);
+}
 
 /*option 2*/
 /* Color Theme Swatches in Hex */
-.KAARI-1-hex { color: #D97F11; }
-.KAARI-2-hex { color: #735B46; }
-.KAARI-3-hex { color: #BFA084; }
-.KAARI-4-hex { color: #F2F1F0; }
-.KAARI-5-hex { color: #F23005; }
+.KAARI-1-hex {
+  color: #d97f11;
+}
+.KAARI-2-hex {
+  color: #735b46;
+}
+.KAARI-3-hex {
+  color: #bfa084;
+}
+.KAARI-4-hex {
+  color: #f2f1f0;
+}
+.KAARI-5-hex {
+  color: #f23005;
+}
 
 /* Color Theme Swatches in RGBA */
-.KAARI-1-rgba { color: rgba(217, 127, 17, 1); }
-.KAARI-2-rgba { color: rgba(115, 91, 70, 1); }
-.KAARI-3-rgba { color: rgba(191, 160, 132, 1); }
-.KAARI-4-rgba { color: rgba(242, 241, 240, 1); }
-.KAARI-5-rgba { color: rgba(242, 48, 5, 1); }
+.KAARI-1-rgba {
+  color: rgba(217, 127, 17, 1);
+}
+.KAARI-2-rgba {
+  color: rgba(115, 91, 70, 1);
+}
+.KAARI-3-rgba {
+  color: rgba(191, 160, 132, 1);
+}
+.KAARI-4-rgba {
+  color: rgba(242, 241, 240, 1);
+}
+.KAARI-5-rgba {
+  color: rgba(242, 48, 5, 1);
+}
 
 /* Color Theme Swatches in HSLA */
-.KAARI-1-hsla { color: hsla(33, 85, 45, 1); }
-.KAARI-2-hsla { color: hsla(27, 24, 36, 1); }
-.KAARI-3-hsla { color: hsla(28, 31, 63, 1); }
-.KAARI-4-hsla { color: hsla(30, 7, 94, 1); }
-.KAARI-5-hsla { color: hsla(10, 95, 48, 1); }
+.KAARI-1-hsla {
+  color: hsla(33, 85, 45, 1);
+}
+.KAARI-2-hsla {
+  color: hsla(27, 24, 36, 1);
+}
+.KAARI-3-hsla {
+  color: hsla(28, 31, 63, 1);
+}
+.KAARI-4-hsla {
+  color: hsla(30, 7, 94, 1);
+}
+.KAARI-5-hsla {
+  color: hsla(10, 95, 48, 1);
+}
