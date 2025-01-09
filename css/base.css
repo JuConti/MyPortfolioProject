@@ -94,6 +94,7 @@ body {
   font-size: 18px;
   margin-left: 5%;
   margin-right: 5%;
+  padding-top: 50px;
 }
 
 .scroll-hint {
@@ -138,8 +139,8 @@ body {
 /* Parallax Container */
 .parallax-container {
   position: relative;
-  height: 400px; /* Ensure this aligns with your parallax image */
-  overflow: hidden;
+  height: 100vh; /* Ensure this aligns with your parallax image */
+  overflow: visible;
 }
 
 .parallax {
@@ -150,7 +151,6 @@ body {
   color: white;
   text-align: center;
   position: absolute; /* Stay within document flow */
-  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
@@ -158,6 +158,7 @@ body {
   background-attachment: fixed; /* Parallax effect */
   background-position: center;
   font-size: 18px;
+  z-index: -1;
 }
 
 .parallax h2 {
