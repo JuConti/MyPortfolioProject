@@ -43,8 +43,10 @@ highlightImages.forEach(img => observer.observe(img));
 
     window.addEventListener("scroll", () => {
         const offset = window.scrollY;
+        console.log("Scroll detected. Offset:", offset);
         const parallaxSpeed = 0.3;
-
+        parallaxBackground.style.transform = `translateY(${offset * parallaxSpeed}px)`;
+    
         if (parallaxContainer) {
             // Calculate the offset only when the container is in view
             const containerOffset = parallaxContainer.offsetTop;
