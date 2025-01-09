@@ -240,7 +240,7 @@ body {
 
 /* Parallax Container */
 .parallax {
-  height: calc(100% - 5vh);
+  height: calc(100% - 50vh);
   background-color: black;
   display: flex;
   align-items: center;
