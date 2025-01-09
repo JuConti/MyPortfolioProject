@@ -238,34 +238,21 @@ body {
 }
 
 /* Parallax Container */
-.parallax-container {
-  position: relative;
+.parallax {
   height: 100vh;
-  overflow: hidden;
+  background-color: black;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.parallax {
-  background: url("https://ik.imagekit.io/juuconti/f-airjordan-12.png?updatedAt=1736371481397")
-    no-repeat center center / cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200%; /* Extend the height for parallax effect */
-  transform: translateY(0);
-  will-change: transform; /* Optimize performance */
-  z-index: -1;
+  color: white;
+  text-align: center;
+  position: relative;
+  margin-top: 500px;
+  font-size: 10;
 }
 
 .parallax h2 {
-  color: #fff;
   font-size: 3rem;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
-  z-index: 1;
-  position: relative;
 }
 
 .container {

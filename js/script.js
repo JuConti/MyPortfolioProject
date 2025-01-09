@@ -38,16 +38,15 @@ highlightImages.forEach(img => observer.observe(img));
   
 
     // Parallax effect for about section
-    document.addEventListener("scroll", () => {
-        const parallaxBackground = document.querySelector(".parallax");
-        const scrollPosition = window.scrollY;
+    const parallaxContainer = document.querySelector(".parallax-container");
+    const parallaxBackground = parallaxContainer.querySelector(".parallax");
+
+    window.addEventListener("scroll", () => {
+        const offset = window.scrollY;
         const parallaxSpeed = 0.3;
-    
-        if (parallaxBackground) {
-            parallaxBackground.style.transform = `translateY(${scrollPosition * parallaxSpeed}px)`;
-        }
+        parallaxBackground.style.transform = `translateY(${offset * parallaxSpeed}px)`;
     });
-    
+
 
     // Grid image animations in portfolio section
     const gridImages = document.querySelectorAll(".portfolio-grid .grid-image-container img");
